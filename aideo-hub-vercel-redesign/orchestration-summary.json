@@ -1,0 +1,153 @@
+{
+  "project": {
+    "name": "Aideo Hub 首页重构",
+    "path": "e:\\PROJECT\\三合一1.1\\aideo-hub-vercel-redesign",
+    "operation": "create",
+    "deviceType": "desktop",
+    "language": "zh-CN",
+    "dashboardMode": false,
+    "replicationMode": null,
+    "sourceUrl": null,
+    "visualSpecExcerpt": null,
+    "styleDefinitionBrief": null,
+    "designRead": "产品落地页 / 出海团队与决策者 / 技术克制 / 中高密度 / 避免炫光营销感",
+    "designDials": {
+      "layoutVariance": 3,
+      "motionIntensity": 1,
+      "visualDensity": 3
+    },
+    "styleContinuityAnchors": {
+      "colorSystem": "Vercel 单色系主导，浅底深字，强调只通过明暗反转与边框层级建立，不引入彩色品牌渐变；蓝色仅保留给数据或流程重点。",
+      "shapeSystem": "统一 8px 圆角，卡片、按钮、输入框都保持克制利落，不使用柔软夸张圆角。",
+      "typographySystem": "界面主字体采用 Geist 风格无衬线，技术信息辅以等宽字，标题短促、正文精炼。",
+      "spacingSystem": "基于 4px 节奏构建紧凑留白，首屏与内容区之间保持明确分层但不过度铺张。",
+      "componentLanguage": "导航、按钮、卡片以细边框、低装饰、强信息层级为核心；按钮短句、卡片安静、导航紧凑。",
+      "surfaceAndDepth": "表层依赖边框和浅深色阶做区分，静态区块几乎无阴影，浮层才允许更明显层次。",
+      "imageryAndIconography": "弱化大幅营销插画，优先使用结构化模块、指标、清晰小图标与简洁信息分区。",
+      "interactionTone": "动效保持轻微过渡与明确 hover/focus 反馈，不做炫技式动画。"
+    },
+    "specsConstraints": null,
+    "sharedProjectShellContract": null,
+    "generationTree": null
+  },
+  "designSource": {
+    "operatingMode": "library-bound",
+    "libraryIdentity": {
+      "name": "Vercel",
+      "id": "dl_builtin_vercel",
+      "version": null,
+      "scope": "built-in-global",
+      "path": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel",
+      "versionSource": null
+    },
+    "libraryPath": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel",
+    "cssFilePath": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel\\colors_and_type.css",
+    "brandPrefix": "vercel",
+    "themeMode": "light",
+    "designDecisionSummary": "采用 Vercel 式克制产品语言：单色基调、8px 圆角、4px 节奏、Geist 风格排版、细边框替代厚重阴影，蓝色只用于少量数据强调。",
+    "componentContractKind": "legacy-json",
+    "forbiddenInventedComponents": [],
+    "allowedComponents": [
+      "button",
+      "card",
+      "navigation",
+      "table",
+      "chart",
+      "sidebar"
+    ],
+    "styleConstraints": {
+      "radiusMax": 8,
+      "spacingBase": 4,
+      "fontSizeBody": 13,
+      "fontSizeMin": 10,
+      "controlHeightDefault": 34,
+      "controlHeightLarge": 38
+    },
+    "productContext": {
+      "kitType": "dashboard",
+      "productType": "developer platform"
+    },
+    "actualTokenNameReference": [
+      { "semanticPurpose": "页面背景", "tokenName": "background" },
+      { "semanticPurpose": "主要文字", "tokenName": "foreground" },
+      { "semanticPurpose": "卡片表面", "tokenName": "card" },
+      { "semanticPurpose": "卡片文字", "tokenName": "card-foreground" },
+      { "semanticPurpose": "弱化背景", "tokenName": "muted" },
+      { "semanticPurpose": "弱化文字", "tokenName": "muted-foreground" },
+      { "semanticPurpose": "主强调", "tokenName": "primary" },
+      { "semanticPurpose": "主按钮文字", "tokenName": "primary-foreground" },
+      { "semanticPurpose": "次级表面", "tokenName": "secondary" },
+      { "semanticPurpose": "次级文字", "tokenName": "secondary-foreground" },
+      { "semanticPurpose": "强调表面", "tokenName": "accent" },
+      { "semanticPurpose": "强调文字", "tokenName": "accent-foreground" },
+      { "semanticPurpose": "输入边界", "tokenName": "input" },
+      { "semanticPurpose": "结构边框", "tokenName": "border" },
+      { "semanticPurpose": "焦点描边", "tokenName": "ring" },
+      { "semanticPurpose": "危险状态", "tokenName": "destructive" },
+      { "semanticPurpose": "图表蓝 1", "tokenName": "chart-1" },
+      { "semanticPurpose": "图表蓝 2", "tokenName": "chart-2" },
+      { "semanticPurpose": "图表蓝 3", "tokenName": "chart-3" }
+    ]
+  },
+  "pages": [
+    {
+      "nodeId": "page-index",
+      "slug": "index",
+      "title": "首页",
+      "htmlSrc": "pages/index.html",
+      "pageIndex": 1,
+      "stateGroupId": null,
+      "stateRole": null,
+      "baseStatePageId": null,
+      "sharedShellContract": [],
+      "mutableRegions": [],
+      "derivedFromHtmlSrc": null,
+      "derivationType": "original",
+      "sourcePageId": null,
+      "sourceHtmlSrc": null,
+      "pageType": "showcase",
+      "businessScenario": "Aideo Hub 官网首页重构，突出平台价值、数字员工矩阵、交付流程与结果证明。",
+      "visualNorthStar": "像一页精炼的产品发布页，用非常克制的视觉讲清平台价值与业务结果。",
+      "compositionPattern": "Editorial Product Narrative",
+      "continuityAnchors": [
+        "紧凑顶栏导航",
+        "短句主次按钮",
+        "低装饰边框卡片",
+        "黑白主基调 + 少量蓝色数据强调"
+      ],
+      "libraryRestraintMode": true,
+      "uiKitPath": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel\\ui_kits\\dashboard\\index.html",
+      "componentPlan": [
+        {
+          "slug": "navigation",
+          "contractKind": "legacy-json",
+          "previewFile": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel\\preview\\component-navigation.html",
+          "contractFile": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel\\components\\navigation.json"
+        },
+        {
+          "slug": "button",
+          "contractKind": "legacy-json",
+          "previewFile": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel\\preview\\component-button.html",
+          "contractFile": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel\\components\\button.json"
+        },
+        {
+          "slug": "card",
+          "contractKind": "legacy-json",
+          "previewFile": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel\\preview\\component-card.html",
+          "contractFile": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel\\components\\card.json"
+        }
+      ],
+      "imagePlan": [],
+      "chartsRequired": false,
+      "miniProgramStyle": false,
+      "qualityRisks": [
+        "原页面信息较多，容易再次堆叠成卡片墙",
+        "中文长标题容易破坏克制感",
+        "业务很多，需避免首屏过度拥挤"
+      ]
+    }
+  ],
+  "assets": [],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

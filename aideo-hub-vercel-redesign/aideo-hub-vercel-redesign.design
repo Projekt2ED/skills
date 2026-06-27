@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "id": "page-index",
+      "title": "首页",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1782538910000,
+      "canvasData": {
+        "x": 48,
+        "y": 288,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/index.html",
+        "interactions": []
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": false,
+    "deviceType": "desktop",
+    "projectName": "Aideo Hub 首页重构",
+    "designLibrary": {
+      "name": "Vercel",
+      "id": "dl_builtin_vercel",
+      "version": null,
+      "scope": "built-in-global",
+      "path": "c:\\Users\\Administrator\\.trae\\design_libraries\\dl_builtin_vercel",
+      "versionSource": null
+    }
+  }
+}

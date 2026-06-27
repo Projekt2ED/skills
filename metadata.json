@@ -1,0 +1,6 @@
+{
+  "name": "Aideo Studio",
+  "description": "Aideo Studio - 跨境视频 AI 助手：智能视频分析、复刻、生成与翻译多语种素材出海工具包。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

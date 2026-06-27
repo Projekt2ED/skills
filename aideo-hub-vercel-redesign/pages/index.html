@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <style id="theme-vars">
+/* Source: structured-spec */
+
+:root {
+  /* bg */
+  --background: #ffffff;
+  --card: #ffffff;
+  --popover: #ffffff;
+  --muted: #f5f5f5;
+
+  /* text */
+  --foreground: #0a0a0a;
+  --card-foreground: #0a0a0a;
+  --popover-foreground: #0a0a0a;
+  --primary-foreground: #fafafa;
+  --secondary-foreground: #171717;
+  --muted-foreground: #858585;
+  --accent-foreground: #171717;
+  --destructive-foreground: #ffffff;
+
+  /* accent */
+  --primary: #121212;
+  --secondary: #f5f5f5;
+  --accent: #f5f5f5;
+  --input: #e5e5e5;
+  --ring: #0d0d0d;
+
+  /* border */
+  --border: #e8e8e8;
+
+  /* success */
+  --success-subtle: #14241a;
+  --success: #62d178;
+  --success-strong: #8be59c;
+  --success-foreground: #0a0a0a;
+
+  /* error */
+  --error-subtle: #2a1517;
+  --error: #ff6166;
+  --error-strong: #ff9a9d;
+  --error-foreground: #0a0a0a;
+
+  /* status */
+  --destructive: #e7000b;
+
+  /* chart */
+  --chart-1: #91c5ff;
+  --chart-2: #3a81f6;
+  --chart-3: #2563ef;
+  --chart-4: #1a4eda;
+  --chart-5: #1f3fad;
+
+  /* sidebar */
+  --sidebar: #fafafa;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-primary: #171717;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #a1a1a1;
+
+  /* font */
+  --font-sans: Geist, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: DM Serif Display, ui-serif, serif;
+  --font-mono: Geist Mono, ui-monospace, monospace;
+
+  /* radius */
+  --radius: 0.5rem;
+
+  /* shadow */
+  --shadow-x: 0;
+  --shadow-y: 1px;
+  --shadow-blur: 0px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0;
+  --shadow-color: #000000;
+  --shadow-2xs: 0 1px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-xs: 0 1px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-sm: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 1px 2px -1px rgba(0, 0, 0, 0);
+  --shadow: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 1px 2px -1px rgba(0, 0, 0, 0);
+  --shadow-md: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 2px 4px -1px rgba(0, 0, 0, 0);
+  --shadow-lg: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 4px 6px -1px rgba(0, 0, 0, 0);
+  --shadow-xl: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 8px 10px -1px rgba(0, 0, 0, 0);
+  --shadow-2xl: 0 1px 0px 0px rgba(0, 0, 0, 0);
+
+  /* typography */
+  --tracking-normal: 0em;
+
+  /* spacing */
+  --spacing: 0.25rem;
+}
+
+.dark {
+  /* bg */
+  --background: #0a0a0a;
+  --card: #171717;
+  --popover: #262626;
+  --muted: #262626;
+
+  /* text */
+  --foreground: #fafafa;
+  --card-foreground: #fafafa;
+  --popover-foreground: #fafafa;
+  --primary-foreground: #171717;
+  --secondary-foreground: #fafafa;
+  --muted-foreground: #a1a1a1;
+  --accent-foreground: #fafafa;
+  --destructive-foreground: #fafafa;
+
+  /* accent */
+  --primary: #e5e5e5;
+  --secondary: #262626;
+  --accent: #404040;
+  --input: #343434;
+  --ring: #737373;
+
+  /* border */
+  --border: #282828;
+
+  /* success */
+  --success-subtle: #14241a;
+  --success: #62d178;
+  --success-strong: #8be59c;
+  --success-foreground: #0a0a0a;
+
+  /* error */
+  --error-subtle: #2a1517;
+  --error: #ff6166;
+  --error-strong: #ff9a9d;
+  --error-foreground: #0a0a0a;
+
+  /* status */
+  --destructive: #ff6467;
+
+  /* chart */
+  --chart-1: #91c5ff;
+  --chart-2: #3a81f6;
+  --chart-3: #2563ef;
+  --chart-4: #1a4eda;
+  --chart-5: #1f3fad;
+
+  /* sidebar */
+  --sidebar: #171717;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #1447e6;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #282828;
+  --sidebar-ring: #525252;
+
+  /* font */
+  --font-sans: Geist, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: DM Serif Display, ui-serif, serif;
+  --font-mono: Geist Mono, ui-monospace, monospace;
+
+  /* radius */
+  --radius: 0.5rem;
+
+  /* shadow */
+  --shadow-x: 0;
+  --shadow-y: 1px;
+  --shadow-blur: 0px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0;
+  --shadow-color: #000000;
+  --shadow-2xs: 0 1px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-xs: 0 1px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-sm: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 1px 2px -1px rgba(0, 0, 0, 0);
+  --shadow: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 1px 2px -1px rgba(0, 0, 0, 0);
+  --shadow-md: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 2px 4px -1px rgba(0, 0, 0, 0);
+  --shadow-lg: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 4px 6px -1px rgba(0, 0, 0, 0);
+  --shadow-xl: 0 1px 0px 0px rgba(0, 0, 0, 0), 0 8px 10px -1px rgba(0, 0, 0, 0);
+  --shadow-2xl: 0 1px 0px 0px rgba(0, 0, 0, 0);
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  
+  @layer base {
+    body { background: var(--vercel-background); color: var(--vercel-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main class="min-h-screen" style="background:var(--background);color:var(--foreground);font-family:var(--font-sans);">
+        <header class="sticky top-0 z-30 border-b" style="background:var(--background);border-color:var(--border);">
+            <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+                <a href="#hero" class="flex min-w-0 items-center gap-3 no-underline transition-transform duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="color:var(--foreground);outline-color:var(--ring);" data-dom-id="nav-home">
+                    <span class="inline-flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-lg border text-[12px] font-semibold" style="border-color:var(--border);background:var(--card);color:var(--foreground);box-shadow:var(--shadow-xs);">AH</span>
+                    <span class="min-w-0">
+                        <span class="block truncate text-[13px] font-semibold">Aideo Hub</span>
+                        <span class="block truncate text-[12px]" style="color:var(--muted-foreground);">跨境数字员工平台</span>
+                    </span>
+                </a>
+                <nav class="hidden items-center gap-1 md:flex" aria-label="主导航">
+                    <a href="#platform" class="inline-flex h-[34px] items-center justify-center whitespace-nowrap rounded-lg px-3 text-[13px] font-medium no-underline transition-colors duration-150 hover:border" style="color:var(--muted-foreground);border-color:var(--border);" data-dom-id="nav-platform">平台</a>
+                    <a href="#employees" class="inline-flex h-[34px] items-center justify-center whitespace-nowrap rounded-lg px-3 text-[13px] font-medium no-underline transition-colors duration-150 hover:border" style="color:var(--muted-foreground);border-color:var(--border);" data-dom-id="nav-employees">员工</a>
+                    <a href="#workflow" class="inline-flex h-[34px] items-center justify-center whitespace-nowrap rounded-lg px-3 text-[13px] font-medium no-underline transition-colors duration-150 hover:border" style="color:var(--muted-foreground);border-color:var(--border);" data-dom-id="nav-workflow">流程</a>
+                    <a href="#capability" class="inline-flex h-[34px] items-center justify-center whitespace-nowrap rounded-lg px-3 text-[13px] font-medium no-underline transition-colors duration-150 hover:border" style="color:var(--muted-foreground);border-color:var(--border);" data-dom-id="nav-capability">能力</a>
+                </nav>
+                <div class="flex items-center gap-2">
+                    <a href="#employees" class="inline-flex h-[34px] items-center justify-center whitespace-nowrap rounded-lg border px-4 text-[13px] font-medium no-underline transition-colors duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);outline-color:var(--ring);" data-dom-id="header-view-employees">浏览员工</a>
+                    <a href="#bottom-cta" class="group inline-flex h-[34px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border px-4 text-[13px] font-medium no-underline transition-colors duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--primary);background:var(--primary);color:var(--primary-foreground);outline-color:var(--ring);box-shadow:var(--shadow-xs);" data-dom-id="header-open-workspace">
+                        <span>进入工作台</span>
+                        <span class="transition-transform duration-150 group-hover:translate-x-0.5">→</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section id="hero" class="border-b" style="border-color:var(--border);" data-section="hero">
+            <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:py-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(340px,0.95fr)] lg:gap-10 lg:px-8 lg:py-20">
+                <div class="flex min-w-0 flex-col justify-center">
+                    <h1 class="max-w-[10ch] text-[clamp(32px,5vw,48px)] font-semibold leading-[1.18] tracking-[-0.02em]" style="text-wrap:balance;word-break:keep-all;overflow-wrap:break-word;">Aideo Hub</h1>
+                    <div class="mt-4 flex flex-wrap items-center gap-2">
+                        <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px] font-medium" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">平台在线</span>
+                        <span class="text-[12px]" style="color:var(--muted-foreground);">面向出海团队的跨境数字员工平台</span>
+                    </div>
+                    <p class="mt-5 max-w-[34ch] text-[13px] leading-6" style="color:var(--muted-foreground);">
+                        以自然语言驱动多语种营销、本地化跟进与短剧内容创作，把输入素材、员工调度与自动化交付收束到同一套产品界面里。
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);">多语种营销</span>
+                        <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);">本地化跟进</span>
+                        <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);">短剧创作</span>
+                        <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);">自动化交付</span>
+                    </div>
+                    <div class="mt-8 flex flex-wrap items-center gap-3">
+                        <a href="#employees" class="group inline-flex h-[38px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border px-5 text-[13px] font-medium no-underline transition-transform duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--primary);background:var(--primary);color:var(--primary-foreground);outline-color:var(--ring);box-shadow:var(--shadow-xs);" data-dom-id="hero-view-employees">
+                            <span>浏览员工</span>
+                            <span class="transition-transform duration-150 group-hover:translate-x-0.5">→</span>
+                        </a>
+                        <a href="#workflow" class="inline-flex h-[38px] items-center justify-center whitespace-nowrap rounded-lg border px-5 text-[13px] font-medium no-underline transition-transform duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);outline-color:var(--ring);" data-dom-id="hero-dispatch-now">立即调遣</a>
+                    </div>
+                </div>
+
+                <article class="overflow-hidden rounded-lg border" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);box-shadow:var(--shadow-xs);" data-panel="platform-snapshot">
+                    <div class="border-b px-5 py-4" style="border-color:var(--border);">
+                        <div class="flex items-start justify-between gap-4">
+                            <div class="min-w-0">
+                                <div class="flex items-center gap-2">
+                                    <span class="inline-flex h-2 w-2 shrink-0 rounded-full" style="background:var(--chart-2);"></span>
+                                    <span class="truncate text-[13px] font-semibold">平台快照</span>
+                                </div>
+                                <p class="mt-2 max-w-[26ch] text-[12px] leading-5" style="color:var(--muted-foreground);">当前在线调度三类数字员工，面向营销、销售与内容交付。</p>
+                            </div>
+                            <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px] font-medium" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">在线</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-0 border-b" style="border-color:var(--border);font-variant-numeric:tabular-nums;">
+                        <div class="border-r px-5 py-4" style="border-color:var(--border);">
+                            <div class="text-[12px]" style="color:var(--muted-foreground);">语种支持</div>
+                            <div class="mt-2 text-[24px] font-semibold tracking-[-0.02em]">20+</div>
+                        </div>
+                        <div class="px-5 py-4">
+                            <div class="text-[12px]" style="color:var(--muted-foreground);">响应速度</div>
+                            <div class="mt-2 text-[24px] font-semibold tracking-[-0.02em]">&lt; 1.5s</div>
+                        </div>
+                        <div class="border-r border-t px-5 py-4" style="border-color:var(--border);">
+                            <div class="text-[12px]" style="color:var(--muted-foreground);">上下文协同</div>
+                            <div class="mt-2 text-[24px] font-semibold tracking-[-0.02em]">100%</div>
+                        </div>
+                        <div class="border-t px-5 py-4" style="border-color:var(--border);">
+                            <div class="text-[12px]" style="color:var(--muted-foreground);">综合成本</div>
+                            <div class="mt-2 text-[24px] font-semibold tracking-[-0.02em]">-90%</div>
+                        </div>
+                    </div>
+                    <div class="px-5 py-2">
+                        <div class="grid gap-0">
+                            <div class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b py-3" style="border-color:var(--border);">
+                                <div class="min-w-0">
+                                    <div class="truncate text-[13px] font-medium">多语种营销助理</div>
+                                    <div class="mt-1 truncate text-[12px]" style="color:var(--muted-foreground);">本土化视频、文案与语音分发</div>
+                                </div>
+                                <span class="whitespace-nowrap text-[12px] font-medium" style="color:var(--chart-2);">20+ 语种</span>
+                            </div>
+                            <div class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b py-3" style="border-color:var(--border);">
+                                <div class="min-w-0">
+                                    <div class="truncate text-[13px] font-medium">海外销售转化助理</div>
+                                    <div class="mt-1 truncate text-[12px]" style="color:var(--muted-foreground);">全天候跟进与本地化话术生成</div>
+                                </div>
+                                <span class="whitespace-nowrap text-[12px] font-medium" style="color:var(--chart-2);">100% 跟进</span>
+                            </div>
+                            <div class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3">
+                                <div class="min-w-0">
+                                    <div class="truncate text-[13px] font-medium">出海爽剧创作编导</div>
+                                    <div class="mt-1 truncate text-[12px]" style="color:var(--muted-foreground);">脚本、分镜与海外节奏创作</div>
+                                </div>
+                                <span class="whitespace-nowrap text-[12px] font-medium" style="color:var(--chart-2);">产出 +400%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t px-5 py-4" style="border-color:var(--border);">
+                        <div class="grid gap-2 sm:grid-cols-3">
+                            <div class="rounded-lg border px-3 py-3" style="border-color:var(--border);background:var(--secondary);">
+                                <div class="text-[12px] font-medium">轻量挂载</div>
+                                <div class="mt-1 line-clamp-2 text-[12px] leading-5" style="color:var(--muted-foreground);">嵌入现有工作流，不新增重型系统负担。</div>
+                            </div>
+                            <div class="rounded-lg border px-3 py-3" style="border-color:var(--border);background:var(--secondary);">
+                                <div class="text-[12px] font-medium">上下文感知</div>
+                                <div class="mt-1 line-clamp-2 text-[12px] leading-5" style="color:var(--muted-foreground);">自动继承素材、文档与对话语境。</div>
+                            </div>
+                            <div class="rounded-lg border px-3 py-3" style="border-color:var(--border);background:var(--secondary);">
+                                <div class="text-[12px] font-medium">自然语言口令</div>
+                                <div class="mt-1 line-clamp-2 text-[12px] leading-5" style="color:var(--muted-foreground);">直接下达指令，自动推进结果交付。</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="platform" class="border-b" style="border-color:var(--border);" data-section="results">
+            <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+                <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="min-w-0">
+                        <h2 class="text-[20px] font-semibold tracking-[-0.02em]" style="text-wrap:balance;word-break:keep-all;overflow-wrap:break-word;">结果证明</h2>
+                        <p class="mt-3 max-w-[42ch] text-[13px] leading-6" style="color:var(--muted-foreground);">指标只保留当前业务中已经出现的真实信息，用更紧凑的结构说明平台对效率、协同与成本的直接影响。</p>
+                    </div>
+                    <p class="max-w-[34ch] text-[12px] leading-5" style="color:var(--muted-foreground);">从多语种触达到自动跟进，再到内容量产，Aideo Hub 用同一套上下文承接交付链路。</p>
+                </div>
+                <div class="mt-8 overflow-hidden rounded-lg border" style="border-color:var(--border);background:var(--card);box-shadow:var(--shadow-xs);">
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4">
+                        <div class="border-b px-5 py-5 lg:border-b-0 lg:border-r" style="border-color:var(--border);font-variant-numeric:tabular-nums;">
+                            <div class="text-[12px]" style="color:var(--muted-foreground);">语种支持</div>
+                            <div class="mt-3 text-[28px] font-semibold tracking-[-0.02em]">20+</div>
+                            <div class="mt-2 text-[12px] leading-5" style="color:var(--muted-foreground);">覆盖营销视频、销售沟通与内容输出。</div>
+                        </div>
+                        <div class="border-b px-5 py-5 sm:border-l lg:border-b-0 lg:border-l-0 lg:border-r" style="border-color:var(--border);font-variant-numeric:tabular-nums;">
+                            <div class="text-[12px]" style="color:var(--muted-foreground);">实时响应</div>
+                            <div class="mt-3 text-[28px] font-semibold tracking-[-0.02em]">&lt; 1.5s</div>
+                            <div class="mt-2 text-[12px] leading-5" style="color:var(--muted-foreground);">支持高频问答、跟进草拟与快速复核。</div>
+                        </div>
+                        <div class="border-b px-5 py-5 lg:border-b-0 lg:border-r" style="border-color:var(--border);font-variant-numeric:tabular-nums;">
+                            <div class="text-[12px]" style="color:var(--muted-foreground);">协同准确</div>
+                            <div class="mt-3 text-[28px] font-semibold tracking-[-0.02em]">100%</div>
+                            <div class="mt-2 text-[12px] leading-5" style="color:var(--muted-foreground);">上下文在员工之间完整传递，不重复补充素材。</div>
+                        </div>
+                        <div class="px-5 py-5" style="font-variant-numeric:tabular-nums;">
+                            <div class="text-[12px]" style="color:var(--muted-foreground);">成本下降</div>
+                            <div class="mt-3 text-[28px] font-semibold tracking-[-0.02em]">-90%</div>
+                            <div class="mt-2 text-[12px] leading-5" style="color:var(--muted-foreground);">综合制作成本显著收缩，释放团队执行时间。</div>
+                        </div>
+                    </div>
+                    <div class="border-t px-5 py-4 text-[12px] leading-5" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">
+                        一页展示的是结果，背后对应的是轻量挂载、上下文感知与自然语言指令三种底层能力的同时生效。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="employees" class="border-b" style="border-color:var(--border);" data-section="employee-matrix">
+            <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+                <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="min-w-0">
+                        <h2 class="text-[20px] font-semibold tracking-[-0.02em]" style="text-wrap:balance;word-break:keep-all;overflow-wrap:break-word;">员工矩阵</h2>
+                        <p class="mt-3 max-w-[42ch] text-[13px] leading-6" style="color:var(--muted-foreground);">三名当前可调度数字员工保持同一产品语义：清晰职责、统一结构、直接指向结果。</p>
+                    </div>
+                    <a href="#bottom-cta" class="inline-flex h-[34px] items-center justify-center whitespace-nowrap rounded-lg border px-4 text-[13px] font-medium no-underline transition-transform duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);outline-color:var(--ring);" data-dom-id="employees-open-workspace">进入工作台</a>
+                </div>
+                <div class="mt-8 grid gap-4 lg:grid-cols-3">
+                    <article class="flex h-full flex-col overflow-hidden rounded-lg border transition-transform duration-150 hover:-translate-y-px" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);box-shadow:var(--shadow-xs);" data-card="employee-marketing">
+                        <div class="flex items-center justify-between gap-3 border-b px-5 py-4" style="border-color:var(--border);">
+                            <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px] font-medium" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">已上线</span>
+                            <span class="whitespace-nowrap text-[12px] font-medium" style="color:var(--chart-2);">获客转化 +180%</span>
+                        </div>
+                        <div class="flex flex-1 flex-col gap-5 px-5 py-5">
+                            <div>
+                                <h3 class="text-[16px] font-semibold">多语种营销助理</h3>
+                                <p class="mt-2 text-[13px] leading-6" style="color:var(--muted-foreground);">负责爆款营销视频的本土化处理，覆盖文案、配音、口型与分发链路。</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">爆款文案拆解</span>
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">人声克隆</span>
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">智能口型对齐</span>
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">20+ 语种分发</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3" style="font-variant-numeric:tabular-nums;">
+                                <div class="rounded-lg border px-3 py-3" style="border-color:var(--border);background:var(--secondary);">
+                                    <div class="text-[12px]" style="color:var(--muted-foreground);">核心结果</div>
+                                    <div class="mt-2 text-[18px] font-semibold">+180%</div>
+                                </div>
+                                <div class="rounded-lg border px-3 py-3" style="border-color:var(--border);background:var(--secondary);">
+                                    <div class="text-[12px]" style="color:var(--muted-foreground);">成本节省</div>
+                                    <div class="mt-2 text-[18px] font-semibold">85%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t px-5 py-4" style="border-color:var(--border);">
+                            <a href="#bottom-cta" class="group inline-flex h-[34px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border px-4 text-[13px] font-medium no-underline transition-transform duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);outline-color:var(--ring);" data-dom-id="employee-marketing-enter">
+                                <span>进入工作台</span>
+                                <span class="transition-transform duration-150 group-hover:translate-x-0.5">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="flex h-full flex-col overflow-hidden rounded-lg border transition-transform duration-150 hover:-translate-y-px" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);box-shadow:var(--shadow-xs);" data-card="employee-sales">
+                        <div class="flex items-center justify-between gap-3 border-b px-5 py-4" style="border-color:var(--border);">
+                            <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px] font-medium" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">已上线</span>
+                            <span class="whitespace-nowrap text-[12px] font-medium" style="color:var(--chart-2);">生成响应 &lt; 1.5s</span>
+                        </div>
+                        <div class="flex flex-1 flex-col gap-5 px-5 py-5">
+                            <div>
+                                <h3 class="text-[16px] font-semibold">海外销售转化助理</h3>
+                                <p class="mt-2 text-[13px] leading-6" style="color:var(--muted-foreground);">负责异议处理、社媒跟进信与商务谈判辅助，让本地化跟进更持续。</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">异议转化处理</span>
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">社媒跟进信</span>
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">24h 自动响应</span>
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">商务谈判模式</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3" style="font-variant-numeric:tabular-nums;">
+                                <div class="rounded-lg border px-3 py-3" style="border-color:var(--border);background:var(--secondary);">
+                                    <div class="text-[12px]" style="color:var(--muted-foreground);">跟进率</div>
+                                    <div class="mt-2 text-[18px] font-semibold">100%</div>
+                                </div>
+                                <div class="rounded-lg border px-3 py-3" style="border-color:var(--border);background:var(--secondary);">
+                                    <div class="text-[12px]" style="color:var(--muted-foreground);">响应速度</div>
+                                    <div class="mt-2 text-[18px] font-semibold">&lt; 1.5s</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t px-5 py-4" style="border-color:var(--border);">
+                            <a href="#bottom-cta" class="group inline-flex h-[34px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border px-4 text-[13px] font-medium no-underline transition-transform duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);outline-color:var(--ring);" data-dom-id="employee-sales-enter">
+                                <span>进入工作台</span>
+                                <span class="transition-transform duration-150 group-hover:translate-x-0.5">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="flex h-full flex-col overflow-hidden rounded-lg border transition-transform duration-150 hover:-translate-y-px" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);box-shadow:var(--shadow-xs);" data-card="employee-drama">
+                        <div class="flex items-center justify-between gap-3 border-b px-5 py-4" style="border-color:var(--border);">
+                            <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px] font-medium" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">已上线</span>
+                            <span class="whitespace-nowrap text-[12px] font-medium" style="color:var(--chart-2);">黄金扣子留存 +45%</span>
+                        </div>
+                        <div class="flex flex-1 flex-col gap-5 px-5 py-5">
+                            <div>
+                                <h3 class="text-[16px] font-semibold">出海爽剧创作编导</h3>
+                                <p class="mt-2 text-[13px] leading-6" style="color:var(--muted-foreground);">负责爽点设计、分镜脚本与海外爆款节奏整理，压缩创作与复盘周期。</p>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">黄金爽点设计</span>
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">分镜脚本生成</span>
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">海外爆款节奏</span>
+                                <span class="inline-flex h-[24px] items-center justify-center whitespace-nowrap rounded-lg border px-2 text-[12px]" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">地道语境润色</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3" style="font-variant-numeric:tabular-nums;">
+                                <div class="rounded-lg border px-3 py-3" style="border-color:var(--border);background:var(--secondary);">
+                                    <div class="text-[12px]" style="color:var(--muted-foreground);">剧本产出</div>
+                                    <div class="mt-2 text-[18px] font-semibold">+400%</div>
+                                </div>
+                                <div class="rounded-lg border px-3 py-3" style="border-color:var(--border);background:var(--secondary);">
+                                    <div class="text-[12px]" style="color:var(--muted-foreground);">留存提升</div>
+                                    <div class="mt-2 text-[18px] font-semibold">+45%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t px-5 py-4" style="border-color:var(--border);">
+                            <a href="#bottom-cta" class="group inline-flex h-[34px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border px-4 text-[13px] font-medium no-underline transition-transform duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);outline-color:var(--ring);" data-dom-id="employee-drama-enter">
+                                <span>进入工作台</span>
+                                <span class="transition-transform duration-150 group-hover:translate-x-0.5">→</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow" class="border-b" style="border-color:var(--border);" data-section="workflow">
+            <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+                <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="min-w-0">
+                        <h2 class="text-[20px] font-semibold tracking-[-0.02em]" style="text-wrap:balance;word-break:keep-all;overflow-wrap:break-word;">工作方式</h2>
+                        <p class="mt-3 max-w-[42ch] text-[13px] leading-6" style="color:var(--muted-foreground);">页面不强调炫技，而是用更接近产品流程的结构，把素材输入、员工调度与结果交付拆成三个可理解步骤。</p>
+                    </div>
+                    <p class="max-w-[34ch] text-[12px] leading-5" style="color:var(--muted-foreground);">单次任务也能串起跨语种素材、上下文与交付标准，不需要在多个工具之间来回切换。</p>
+                </div>
+                <div class="mt-8 overflow-hidden rounded-lg border" style="border-color:var(--border);background:var(--card);box-shadow:var(--shadow-xs);">
+                    <div class="grid lg:grid-cols-3">
+                        <article class="border-b px-5 py-5 lg:border-b-0 lg:border-r" style="border-color:var(--border);">
+                            <div class="text-[12px] font-medium" style="color:var(--chart-2);font-variant-numeric:tabular-nums;">01</div>
+                            <h3 class="mt-3 text-[16px] font-semibold">输入素材</h3>
+                            <p class="mt-3 text-[13px] leading-6" style="color:var(--muted-foreground);">上传产品信息、参考视频、聊天记录或活动目标，作为本次任务的统一上下文。</p>
+                            <ul class="mt-4 grid gap-2 text-[12px] leading-5" style="color:var(--muted-foreground);">
+                                <li class="truncate">产品文档与卖点</li>
+                                <li class="truncate">竞品素材与字幕</li>
+                                <li class="truncate">渠道目标与受众语言</li>
+                            </ul>
+                        </article>
+                        <article class="border-b px-5 py-5 lg:border-b-0 lg:border-r" style="border-color:var(--border);">
+                            <div class="text-[12px] font-medium" style="color:var(--chart-2);font-variant-numeric:tabular-nums;">02</div>
+                            <h3 class="mt-3 text-[16px] font-semibold">调度员工</h3>
+                            <p class="mt-3 text-[13px] leading-6" style="color:var(--muted-foreground);">根据任务类型自动匹配营销、销售或内容员工，也可由团队直接用口令指定顺序。</p>
+                            <ul class="mt-4 grid gap-2 text-[12px] leading-5" style="color:var(--muted-foreground);">
+                                <li class="truncate">自然语言下达指令</li>
+                                <li class="truncate">共享同一上下文池</li>
+                                <li class="truncate">按交付目标并行协同</li>
+                            </ul>
+                        </article>
+                        <article class="px-5 py-5">
+                            <div class="text-[12px] font-medium" style="color:var(--chart-2);font-variant-numeric:tabular-nums;">03</div>
+                            <h3 class="mt-3 text-[16px] font-semibold">输出交付</h3>
+                            <p class="mt-3 text-[13px] leading-6" style="color:var(--muted-foreground);">统一返回多语种视频、销售跟进内容或短剧脚本，并保留复用记录，便于继续迭代。</p>
+                            <ul class="mt-4 grid gap-2 text-[12px] leading-5" style="color:var(--muted-foreground);">
+                                <li class="truncate">视频与文案同步生成</li>
+                                <li class="truncate">流程节点自动回填</li>
+                                <li class="truncate">可追踪的交付结果</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="border-t px-5 py-4 text-[12px] leading-5" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);">
+                        这套流程适合开发者平台语境下的官网叙事：更像产品说明，而不是海报式宣传。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="capability" class="border-b" style="border-color:var(--border);" data-section="expansion-cta">
+            <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+                <div class="grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
+                    <article class="overflow-hidden rounded-lg border" style="border-color:var(--border);background:var(--card);box-shadow:var(--shadow-xs);" data-card="future-capabilities">
+                        <div class="border-b px-5 py-5" style="border-color:var(--border);">
+                            <h2 class="text-[20px] font-semibold tracking-[-0.02em]" style="text-wrap:balance;word-break:keep-all;overflow-wrap:break-word;">扩展能力</h2>
+                            <p class="mt-3 max-w-[40ch] text-[13px] leading-6" style="color:var(--muted-foreground);">即将上线的员工保持同一产品框架：能力边界明确、状态透明、上线后可直接加入现有调度流。</p>
+                        </div>
+                        <div class="grid gap-0">
+                            <div class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b px-5 py-4" style="border-color:var(--border);">
+                                <div class="min-w-0">
+                                    <h3 class="truncate text-[16px] font-semibold">海外社媒代运营官</h3>
+                                    <p class="mt-2 line-clamp-2 text-[13px] leading-6" style="color:var(--muted-foreground);">一键挂接海外主流平台，自动分发内容并持续进行高情商互动。</p>
+                                </div>
+                                <span class="whitespace-nowrap text-[12px] font-medium" style="color:var(--chart-2);font-variant-numeric:tabular-nums;">94% 就绪</span>
+                            </div>
+                            <div class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b px-5 py-4" style="border-color:var(--border);">
+                                <div class="min-w-0">
+                                    <h3 class="truncate text-[16px] font-semibold">广告投放视觉分析师</h3>
+                                    <p class="mt-2 line-clamp-2 text-[13px] leading-6" style="color:var(--muted-foreground);">为广告海报与创意素材生成多维变体，持续提升点击与转化判断效率。</p>
+                                </div>
+                                <span class="whitespace-nowrap text-[12px] font-medium" style="color:var(--chart-2);font-variant-numeric:tabular-nums;">88% 就绪</span>
+                            </div>
+                            <div class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4">
+                                <div class="min-w-0">
+                                    <h3 class="truncate text-[16px] font-semibold">独立站流量内容写手</h3>
+                                    <p class="mt-2 line-clamp-2 text-[13px] leading-6" style="color:var(--muted-foreground);">持续输出适配搜索引擎与转化路径的内容，承接独立站长期获客。</p>
+                                </div>
+                                <span class="whitespace-nowrap text-[12px] font-medium" style="color:var(--chart-2);font-variant-numeric:tabular-nums;">79% 就绪</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="grid gap-4">
+                        <article id="bottom-cta" class="overflow-hidden rounded-lg border" style="border-color:var(--border);background:var(--card);color:var(--card-foreground);box-shadow:var(--shadow-xs);" data-card="bottom-cta">
+                            <div class="border-b px-5 py-5" style="border-color:var(--border);">
+                                <h2 class="text-[20px] font-semibold tracking-[-0.02em]" style="text-wrap:balance;word-break:keep-all;overflow-wrap:break-word;">开始调度</h2>
+                                <p class="mt-3 text-[13px] leading-6" style="color:var(--muted-foreground);">支持把现有工作流与数字员工连接起来，让营销、销售与内容交付在一个入口中持续运行。</p>
+                            </div>
+                            <div class="grid gap-3 px-5 py-5">
+                                <div class="rounded-lg border px-4 py-4" style="border-color:var(--border);background:var(--secondary);">
+                                    <div class="text-[12px]" style="color:var(--muted-foreground);">适配场景</div>
+                                    <div class="mt-2 text-[13px] leading-6">支持 Dify、Coze、Trae / Cursor 等协同环境接入。</div>
+                                </div>
+                                <div class="rounded-lg border px-4 py-4" style="border-color:var(--border);background:var(--secondary);">
+                                    <div class="text-[12px]" style="color:var(--muted-foreground);">交付目标</div>
+                                    <div class="mt-2 text-[13px] leading-6">更少切换、更高复用、更稳定的跨语种结果输出。</div>
+                                </div>
+                                <div class="flex flex-wrap gap-3">
+                                    <a href="#employees" class="inline-flex h-[38px] items-center justify-center whitespace-nowrap rounded-lg border px-5 text-[13px] font-medium no-underline transition-transform duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--border);background:var(--secondary);color:var(--secondary-foreground);outline-color:var(--ring);" data-dom-id="bottom-view-employees">浏览员工</a>
+                                    <a href="#workflow" class="inline-flex h-[38px] items-center justify-center whitespace-nowrap rounded-lg border px-5 text-[13px] font-medium no-underline transition-transform duration-150 hover:-translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2" style="border-color:var(--primary);background:var(--primary);color:var(--primary-foreground);outline-color:var(--ring);box-shadow:var(--shadow-xs);" data-dom-id="bottom-dispatch-now">立即调遣</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <footer class="rounded-lg border px-5 py-5" style="border-color:var(--border);background:var(--background);" data-section="footer">
+                            <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                                <div class="min-w-0">
+                                    <div class="text-[13px] font-semibold">Aideo Hub</div>
+                                    <p class="mt-2 max-w-[34ch] text-[12px] leading-5" style="color:var(--muted-foreground);">跨境数字员工平台，用克制的产品界面组织多语种营销、本地化跟进与短剧创作流程。</p>
+                                </div>
+                                <div class="flex flex-wrap gap-3 text-[12px]">
+                                    <a href="#platform" class="inline-flex h-[24px] items-center justify-center whitespace-nowrap no-underline transition-colors duration-150 hover:underline" style="color:var(--muted-foreground);">结果证明</a>
+                                    <a href="#employees" class="inline-flex h-[24px] items-center justify-center whitespace-nowrap no-underline transition-colors duration-150 hover:underline" style="color:var(--muted-foreground);">员工矩阵</a>
+                                    <a href="#workflow" class="inline-flex h-[24px] items-center justify-center whitespace-nowrap no-underline transition-colors duration-150 hover:underline" style="color:var(--muted-foreground);">工作方式</a>
+                                    <a href="#bottom-cta" class="inline-flex h-[24px] items-center justify-center whitespace-nowrap no-underline transition-colors duration-150 hover:underline" style="color:var(--muted-foreground);">进入工作台</a>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
