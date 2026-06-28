@@ -61,7 +61,7 @@ export default function SalesAssistantView() {
             <div className="relative bg-[#0a0a0c] border border-white/10 rounded-2xl p-1.5 shadow-[0_0_60px_rgba(20,184,166,0.12)] group-hover:shadow-[0_0_80px_rgba(20,184,166,0.2)] transition-shadow duration-700 overflow-hidden">
               <div className="relative overflow-hidden rounded-xl">
                 <img 
-                  src="/src/assets/images/sales_copilot_hero_1782511656996.jpg" 
+                  src="/images/sales_copilot_hero_1782511656996.jpg" 
                   alt="Sales Assistant Hero mockup" 
                   className="w-full h-auto object-cover brightness-110 contrast-105 saturate-110 group-hover:brightness-115 transition-all duration-700"
                   referrerPolicy="no-referrer"
@@ -226,7 +226,7 @@ export default function SalesAssistantView() {
                 </div>
               </div>
               <div className="bg-neutral-950 p-4 rounded-lg border border-neutral-900 space-y-2">
-                <p className="text-[10px] text-teal-400 uppercase font-bold tracking-wider">Aideo Copilot 生成话术</p>
+                <p className="text-[10px] text-teal-400 uppercase font-bold tracking-wider">羲梦 Copilot 生成话术</p>
                 <p className="text-xs text-neutral-300 leading-relaxed">
                   “李总，非常理解初创期预算紧张。如果按常规外包方案，由于多方沟通，单件测试需要耗费数千。但若我们以整体运行效能计，综合成本只需以往的几十分之一。只需一个海外订单转化，您就能完全覆盖我们的配置成本...”
                 </p>
@@ -247,7 +247,7 @@ export default function SalesAssistantView() {
             <div className="relative bg-[#0a0a0c] border border-white/10 rounded-2xl p-1.5 overflow-hidden shadow-[0_0_60px_rgba(20,184,166,0.12)] group-hover:shadow-[0_0_80px_rgba(20,184,166,0.2)] transition-shadow duration-700">
               <div className="relative overflow-hidden rounded-xl">
                 <img 
-                  src="/src/assets/images/sales_growth_metric_1782510552988.jpg" 
+                  src="/images/sales_growth_metric_1782510552988.jpg" 
                   alt="Sales Conversion Metrics & Analytics" 
                   className="w-full h-auto object-cover brightness-110 contrast-105 saturate-110 group-hover:brightness-115 transition-all duration-700"
                   referrerPolicy="no-referrer"

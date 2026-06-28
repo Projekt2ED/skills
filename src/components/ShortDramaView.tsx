@@ -63,7 +63,7 @@ export default function ShortDramaView() {
             <div className="relative bg-[#0a0a0c] border border-white/10 rounded-2xl p-1.5 shadow-[0_0_60px_rgba(168,85,247,0.12)] group-hover:shadow-[0_0_80px_rgba(168,85,247,0.2)] transition-shadow duration-700 overflow-hidden">
               <div className="relative overflow-hidden rounded-xl">
                 <img 
-                  src="/src/assets/images/short_drama_cinema_1782511673522.jpg" 
+                  src="/images/short_drama_cinema_1782511673522.jpg" 
                   alt="AI Short Drama platform mockup" 
                   className="w-full h-auto object-cover brightness-110 contrast-105 saturate-110 group-hover:brightness-115 transition-all duration-700"
                   referrerPolicy="no-referrer"
@@ -227,7 +227,7 @@ export default function ShortDramaView() {
             <div className="relative bg-[#0a0a0c] border border-white/10 rounded-2xl p-1.5 overflow-hidden shadow-[0_0_60px_rgba(168,85,247,0.12)] group-hover:shadow-[0_0_80px_rgba(168,85,247,0.2)] transition-shadow duration-700">
               <div className="relative overflow-hidden rounded-xl">
                 <img 
-                  src="/src/assets/images/short_drama_storyboard_1782510592407.jpg" 
+                  src="/images/short_drama_storyboard_1782510592407.jpg" 
                   alt="AI Cinematic Storyboard Production" 
                   className="w-full h-auto object-cover brightness-110 contrast-105 saturate-110 group-hover:brightness-115 transition-all duration-700"
                   referrerPolicy="no-referrer"

@@ -54,7 +54,7 @@ export default function NeuralTuner() {
     setLogs([]);
 
     const logSteps = [
-      '⚡ [SYSTEM] 初始化 AideoLipSync-v2 神经网络引擎...',
+      '⚡ [SYSTEM] 初始化 XM-LipSync-v2 神经网络引擎...',
       '📡 [NETWORK] 正在验证火山云空间 VOD 证书及 CDN 加密握手... [OK]',
       '🔧 [GPU-CUDA] 成功在火山引擎分配 NVIDIA A100 Tensor Core 显存资源...',
       '📷 [FACE-GRID] 载入人脸三维骨骼追踪模型，检测到 68 个面部特征锚点...',
@@ -90,7 +90,7 @@ export default function NeuralTuner() {
         <div className="space-y-1.5 max-w-xl">
           <p className="text-xs font-bold text-indigo-400 uppercase tracking-widest flex items-center gap-1.5">
             <Activity className="w-4 h-4 animate-pulse" />
-            AideoLipSync & AideoScriptAuditor
+            XM-LipSync & XM-ScriptCheck
           </p>
           <h3 className="text-lg font-bold text-slate-100">高阶神经网络口型微调引擎</h3>
           <p className="text-xs text-slate-400 leading-relaxed">
@@ -202,7 +202,7 @@ export default function NeuralTuner() {
           </div>
 
           <div className="pt-2 border-t border-slate-900 flex justify-between items-center text-[11px] text-slate-500">
-            <span>引擎版本: AideoNeural v2.4-A100</span>
+            <span>引擎版本: XM-Neural v2.4-A100</span>
             <span>自适应防溢出纠正: <b>已开启</b></span>
           </div>
         </div>
@@ -318,7 +318,7 @@ export default function NeuralTuner() {
           <div className="space-y-1">
             <div className="inline-flex items-center gap-1.5 bg-sky-500/10 border border-sky-500/25 px-3 py-1 rounded-full">
               <Clock className="w-3.5 h-3.5 text-sky-400" />
-              <span className="text-[10px] font-bold text-sky-300 tracking-wider">AideoScriptAuditor 脚本时长预检</span>
+              <span className="text-[10px] font-bold text-sky-300 tracking-wider">XM-ScriptCheck 脚本时长预检</span>
             </div>
             <h4 className="text-base sm:text-lg font-bold text-slate-100">口播字数超负荷预检调优</h4>
             <p className="text-xs text-slate-400">
@@ -402,7 +402,7 @@ export default function NeuralTuner() {
                   {/* One click compress button */}
                   <div className="bg-slate-950/80 border border-slate-900 rounded-lg p-3 flex flex-col sm:flex-row justify-between items-center gap-3">
                     <div className="text-left space-y-0.5">
-                      <p className="text-[10px] text-indigo-400 font-bold">Aideo AI 独家纠偏推荐 (无损压缩)：</p>
+                      <p className="text-[10px] text-indigo-400 font-bold">羲梦 AI 独家纠偏推荐 (无损压缩)：</p>
                       <p className="text-[9.5px] text-slate-500 italic truncate max-w-[280px]">"{suggestedCompactText}"</p>
                     </div>
                     <button

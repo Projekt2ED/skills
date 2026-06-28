@@ -443,7 +443,7 @@ export default function AgentWorkspace({
 
                     {/* Logging Ticker */}
                     <div className="bg-slate-950 p-3 rounded-xl border border-slate-900 text-[10px] font-mono text-slate-400 space-y-1 max-h-[140px] overflow-y-auto select-text leading-relaxed">
-                      <p className="text-blue-500">🚀 [Aideo-VOD-Host] Connecting to Volcano AI rendering pool...</p>
+                      <p className="text-blue-500">🚀 [XM-VOD-Host] Connecting to Volcano AI rendering pool...</p>
                       <p className="text-slate-500">→ Submitted via Volcano OpenSDK (Skill: {lastAiMessage.skillType || 'Prompt-to-Video'})</p>
                       <p className="text-slate-400 animate-pulse">⚡ 目前状态：[PROCESSING] 后台正在进行字幕擦除/高光比对、画面重采样与音轨嘴型对齐。计算预估耗时 20s ~ 2min。请保持连线状态。</p>
                     </div>

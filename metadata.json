@@ -1,6 +1,6 @@
 {
-  "name": "Aideo Studio",
-  "description": "Aideo Studio - 跨境视频 AI 助手：智能视频分析、复刻、生成与翻译多语种素材出海工具包。",
+  "name": "羲梦工场",
+  "description": "羲梦工场 - AI 数字员工技能包全家桶：覆盖出海视频、销售转化、短剧策划等核心场景。",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

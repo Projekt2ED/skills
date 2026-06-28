@@ -1,20 +1,15 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 羲梦工场
 
-# Run and deploy your AI Studio app
+羲梦科技的 AI 数字员工技能包全家桶，覆盖出海视频、销售转化、短剧策划等核心场景。
 
-This contains everything you need to run your app locally.
+## 本地运行
 
-View your app in AI Studio: https://ai.studio/apps/0e883314-a4c3-4d87-8ef4-c832cec464f0
+**前置要求：** Node.js
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
+1. 安装依赖：
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. 如需调用后端/第三方能力，按 `.env.example` 配置环境变量
+3. 启动开发服务：
    `npm run dev`
+4. 构建生产版本：
+   `npm run build`

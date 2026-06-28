@@ -312,7 +312,7 @@ export default function TranslationWorkspace({
 
               <div className="space-y-3">
                 <div className="flex justify-between text-[11px] font-mono text-slate-500 bg-slate-950 p-2.5 rounded-xl border border-slate-900">
-                  <span>追踪 Aideo Task ID: <strong className="text-slate-300 select-all font-bold">{translationTask.taskId || '正在建立通讯通道...'}</strong></span>
+                  <span>追踪 羲梦 Task ID: <strong className="text-slate-300 select-all font-bold">{translationTask.taskId || '正在建立通讯通道...'}</strong></span>
                   <span>已耗时: <strong className="text-blue-400">{translationTask.elapsed} 秒</strong></span>
                 </div>
                 
@@ -322,7 +322,7 @@ export default function TranslationWorkspace({
                       <div className="bg-blue-500 h-full animate-pulse rounded-full" style={{ width: '80%', transition: 'width 2s' }}></div>
                     </div>
                     <p className="text-[10px] text-slate-500 flex justify-between">
-                      <span>正在调用火山 Aideos API。后台实时处理切音、大模型翻译以及声画重配对齐中，请稍候...</span>
+                      <span>正在调用火山 羲梦 API。后台实时处理切音、大模型翻译以及声画重配对齐中，请稍候...</span>
                       <span>预估剩余耗时 15 ~ 45s</span>
                     </p>
                   </div>
@@ -334,7 +334,7 @@ export default function TranslationWorkspace({
                 <div className="bg-blue-500/5 p-3 rounded-xl border border-blue-500/10 text-[11px] text-slate-400 leading-relaxed">
                   <p className="font-bold text-blue-400 mb-0.5">🌱 任务已在火山后台创建。并开始排队运算。</p>
                   <p>
-                    我们正在使用最通用的火山 <code>SubmitAideoTaskAsync</code> OpenAPI 驱动。
+                    我们正在使用最通用的火山 <code>SubmitXmTaskAsync</code> OpenAPI 驱动。
                     通常视频在 30 秒至 2 分钟内即由云渲染完成，该系统每 5 秒自动回传。请保持页面开通，生成播放直链后，此处将对新生成的视频提供高保真播放对比。
                   </p>
                 </div>
@@ -351,7 +351,7 @@ export default function TranslationWorkspace({
                     <strong>失败诊断详情：</strong>{translationTask.errorMsg}
                   </p>
                   <div className="p-2.5 bg-slate-950/80 rounded border border-slate-910 text-[10px] font-mono text-slate-500 leading-normal">
-                    请排查您的火山密钥对、以及您填写的 <code>VOD_SPACE_NAME</code> 空间是否在火山点播开通了此项 Aideos (AI智译/翻译) 相关的对应套餐与 API 服务。
+                    请排查您的火山密钥对、以及您填写的 <code>VOD_SPACE_NAME</code> 空间是否在火山点播开通了此项 羲梦 (AI智译/翻译) 相关的对应套餐与 API 服务。
                   </div>
                 </div>
               )}

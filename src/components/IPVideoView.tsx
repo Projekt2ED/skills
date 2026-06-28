@@ -52,7 +52,7 @@ export default function IPVideoView({ onSelectEmployee }: IPVideoViewProps) {
     {
       icon: <Sparkles className="w-4 h-4 text-pink-400" />,
       title: "智能口型同步",
-      desc: "业内顶尖 AideoLipSync 模块，自适应重塑口型，翻译配音后嘴型与重组发音完美对齐，毫无违和痕迹。"
+      desc: "业内顶尖 XM-LipSync 模块，自适应重塑口型，翻译配音后嘴型与重组发音完美对齐，毫无违和痕迹。"
     }
   ];
 
@@ -124,8 +124,8 @@ export default function IPVideoView({ onSelectEmployee }: IPVideoViewProps) {
             <div className="relative bg-[#0a0a0c] border border-white/10 rounded-2xl p-1.5 shadow-[0_0_60px_rgba(99,102,241,0.12)] group-hover:shadow-[0_0_80px_rgba(99,102,241,0.2)] transition-shadow duration-700 overflow-hidden">
               <div className="relative overflow-hidden rounded-xl">
                 <img 
-                  src="/src/assets/images/marketing_video_creator_1782511641803.jpg" 
-                  alt="Aideo Studio 跨境多媒体能力" 
+                  src="/images/marketing_video_creator_1782511641803.jpg" 
+                  alt="羲梦工场 跨境多媒体能力" 
                   className="w-full h-auto object-cover brightness-110 contrast-105 saturate-110 group-hover:brightness-115 transition-all duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -246,7 +246,7 @@ export default function IPVideoView({ onSelectEmployee }: IPVideoViewProps) {
               </div>
               <div className="aspect-video bg-neutral-950 rounded-lg border border-white/10 relative overflow-hidden group/img">
                 <img 
-                  src="/src/assets/images/ip_video_lip_sync_1782510490624.jpg"
+                  src="/images/ip_video_lip_sync_1782510490624.jpg"
                   alt="AI Lip Sync Visualizer"
                   className="w-full h-full object-cover brightness-105 contrast-105 saturate-110 group-hover/img:brightness-110 transition-all duration-500"
                   referrerPolicy="no-referrer"
@@ -268,7 +268,7 @@ export default function IPVideoView({ onSelectEmployee }: IPVideoViewProps) {
               </div>
               <div className="aspect-video bg-neutral-950 rounded-lg border border-white/10 relative overflow-hidden group/img">
                 <img 
-                  src="/src/assets/images/ip_video_kitchen_ad_1782510508354.jpg"
+                  src="/images/ip_video_kitchen_ad_1782510508354.jpg"
                   alt="AI scene integration ad mockup"
                   className="w-full h-full object-cover brightness-105 contrast-105 saturate-110 group-hover/img:brightness-110 transition-all duration-500"
                   referrerPolicy="no-referrer"

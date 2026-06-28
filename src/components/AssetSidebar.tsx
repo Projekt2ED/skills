@@ -247,7 +247,7 @@ export default function AssetSidebar({
             </div>
           </div>
           <p className="text-[9px] text-slate-400 leading-normal">
-            💡 <strong>如何配置：</strong>请在项目根目录下手动创建 <code className="text-slate-200">.env</code> 配置文件，或使用 AI Studio 页面“Settings - Secrets”面板（左侧齿轮图标）添加上述三项变量，配置后<strong>必须重置开发服务（按钮在右上角或指示我重启）</strong>方能生效。
+            💡 <strong>如何配置：</strong>请在项目根目录下手动创建 <code className="text-slate-200">.env</code> 配置文件，或在部署平台的环境变量面板添加上述三项变量，配置后<strong>必须重启服务</strong>方能生效。
           </p>
         </div>
       )}

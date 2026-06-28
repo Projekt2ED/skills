@@ -108,10 +108,10 @@ export default function InteractivePlayground() {
       { p: 90, s: '火山智能流拼接渲染，匹配短视频动感卡点切片节奏...' },
       { p: 100, s: '渲染合成完毕，成功推送至火山云 VOD 服务托管空间！' }
     ] : [
-      { p: 15, s: '正在进行多音轨智能分离，过滤背景噪音 (AideoVocalIsolation)...' },
+      { p: 15, s: '正在进行多音轨智能分离，过滤背景噪音 (XM-VocalIsolation)...' },
       { p: 35, s: '正在使用 LLM 进行地道语言意译与拍点长度计算，防穿帮...' },
-      { p: 60, s: '正在智能提取原声音色特征，克隆并对齐原版情绪起伏 (AideoCloner)...' },
-      { p: 85, s: '启动 AideoLipSync 神经网络，进行嘴部肌肉逐帧变形对齐...' },
+      { p: 60, s: '正在智能提取原声音色特征，克隆并对齐原版情绪起伏 (XM-VoiceClone)...' },
+      { p: 85, s: '启动 XM-LipSync 神经网络，进行嘴部肌肉逐帧变形对齐...' },
       { p: 100, s: '音视频唇形零卡顿合并，火山空间托管链接分发就绪！' }
     ];
 
@@ -324,7 +324,7 @@ export default function InteractivePlayground() {
                 <div className="space-y-1.5">
                   <h4 className="text-xs font-bold text-slate-300">等待智能合成触发</h4>
                   <p className="text-[11px] text-slate-500 max-w-xs leading-normal">
-                    请在左侧调整您的出海产品模版和目标语种，点击下方合成按钮，看 Aideo Studio 如何一键为您合成高精带货素材。
+                    请在左侧调整您的出海产品模版和目标语种，点击下方合成按钮，看 羲梦工场 如何一键为您合成高精带货素材。
                   </p>
                 </div>
               </motion.div>
@@ -348,7 +348,7 @@ export default function InteractivePlayground() {
                 
                 <div className="space-y-2 max-w-xs">
                   <p className="text-xs font-bold text-slate-300 animate-pulse">
-                    正在执行 Aideo 创意链路...
+                    正在执行 羲梦 创意链路...
                   </p>
                   <p className="text-[10.5px] text-slate-500 font-mono leading-relaxed bg-slate-900/50 p-3 rounded-lg border border-slate-900">
                     {synthesisStep}
@@ -380,7 +380,7 @@ export default function InteractivePlayground() {
                     /* Image preview mode */
                     <div className="relative rounded-2xl overflow-hidden border border-slate-800 aspect-video bg-slate-900 flex items-center justify-center">
                       <img 
-                        src="/src/assets/images/ad_creative_mockup_1782454442522.jpg" 
+                        src="/images/ad_creative_mockup_1782454442522.jpg" 
                         alt="AI 创意海报" 
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
@@ -398,7 +398,7 @@ export default function InteractivePlayground() {
                       <div className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-lg shadow-indigo-500/20">
                         <Play className="w-5 h-5 text-white fill-white ml-0.5" />
                       </div>
-                      <span className="text-[10px] text-slate-500 font-mono mt-3">AideoLipSync_Rendered_Output.mp4</span>
+                      <span className="text-[10px] text-slate-500 font-mono mt-3">XM-LipSync_Rendered_Output.mp4</span>
                       <div className="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur border border-slate-800/50 p-2 rounded-lg flex justify-between items-center">
                         <p className="text-[10px] text-slate-300 font-bold flex items-center gap-1">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
@@ -415,7 +415,7 @@ export default function InteractivePlayground() {
                     <div className="grid grid-cols-1 gap-2 text-[10.5px]">
                       <div className="flex justify-between border-b border-slate-950 pb-1 col-span-2">
                         <span className="text-slate-500">火山CDN分发地址:</span>
-                        <span className="font-mono text-indigo-400 truncate max-w-[150px]">volc-vod://aideo/output_f0012e4.mp4</span>
+                        <span className="font-mono text-indigo-400 truncate max-w-[150px]">volc-vod://xmeng/output_f0012e4.mp4</span>
                       </div>
                     </div>
                   </div>
@@ -448,7 +448,7 @@ export default function InteractivePlayground() {
                 <span>重新配置</span>
               </button>
               <button 
-                onClick={() => alert('已成功为您生成临时火山 VOD 下载地址！(模拟下载：AideoLipSync_Rendered_Output.mp4)')}
+                onClick={() => alert('已成功为您生成临时火山 VOD 下载地址！(模拟下载：XM-LipSync_Rendered_Output.mp4)')}
                 className="flex-1 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs text-white font-semibold cursor-pointer transition-colors flex items-center justify-center gap-1"
               >
                 <span>立即下载素材 ➜</span>

@@ -18,33 +18,33 @@ export default function HomeView({ onSelectEmployee }: HomeViewProps) {
   const activeEmployees = [
     {
       id: 'ip-video' as const,
-      name: '多语种营销助理',
-      enName: 'IP Video Specialist',
+      name: '多语种视频助理',
+      enName: 'Global Video Officer',
       badge: '已上线',
-      tagline: '爆款营销视频极速本土化',
+      tagline: '视频翻译、配音克隆、口型对齐，一站搞定',
       skills: ['爆款文案拆解', '人声克隆', '智能口型对齐', '多语种分发'],
       borderColor: 'hover:border-indigo-500/30',
-      image: '/src/assets/images/marketing_video_creator_1782511641803.jpg'
+      image: '/images/marketing_video_creator_1782511641803.jpg'
     },
     {
       id: 'sales-assistant' as const,
-      name: '海外销售转化助理',
-      enName: 'Sales Conversion Copilot',
+      name: '销售转化助理',
+      enName: 'Smart Sales Assistant',
       badge: '已上线',
-      tagline: '全天候跟进与本地化话术生成',
+      tagline: '话术生成、异议处理、客户跟进全程托管',
       skills: ['异议转化处理', '社媒跟进信撰写', '24h 自动化响应', '商务谈判模式'],
       borderColor: 'hover:border-teal-500/30',
-      image: '/src/assets/images/sales_copilot_hero_1782511656996.jpg'
+      image: '/images/sales_copilot_hero_1782511656996.jpg'
     },
     {
       id: 'short-drama' as const,
-      name: '出海爽剧创作编导',
-      enName: 'Outbound Drama Director',
+      name: '短剧策划助理',
+      enName: 'Drama Scriptwriter',
       badge: '已上线',
-      tagline: '黄金爽点剧本与分镜创作',
+      tagline: '剧本大纲、分镜脚本、宣发文案一键生成',
       skills: ['黄金爽点设计', '分镜脚本自动生成', '海外爆款节奏', '地道语境润色'],
       borderColor: 'hover:border-purple-500/30',
-      image: '/src/assets/images/short_drama_cinema_1782511673522.jpg'
+      image: '/images/short_drama_cinema_1782511673522.jpg'
     }
   ];
 
@@ -85,7 +85,7 @@ export default function HomeView({ onSelectEmployee }: HomeViewProps) {
         <section className="text-center space-y-8 max-w-4xl mx-auto pt-8">
           <div className="inline-flex items-center gap-1.5 bg-neutral-900 border border-neutral-800/80 px-4 py-1 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
-            <span className="text-[10px] font-semibold text-neutral-400 tracking-wider uppercase">Aideo Hub · 跨境数字员工平台</span>
+            <span className="text-[10px] font-semibold text-neutral-400 tracking-wider uppercase">羲梦工场 · AI 数字员工技能包</span>
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
@@ -96,7 +96,7 @@ export default function HomeView({ onSelectEmployee }: HomeViewProps) {
           </h1>
 
           <p className="text-base sm:text-lg text-neutral-400 max-w-xl mx-auto leading-relaxed font-normal">
-            精选顶尖出海常识，无缝贴合营销流。开箱即用，即刻启动您的全球化增长极。
+            覆盖出海视频、销售转化、短剧策划等核心场景。开箱即用，即刻启动您的全球化增长。
           </p>
 
           <div className="pt-4 flex justify-center">
@@ -128,9 +128,9 @@ export default function HomeView({ onSelectEmployee }: HomeViewProps) {
               {/* Agent grid */}
               <div className="grid grid-cols-3 divide-x divide-neutral-800">
                 {[
-                  { name: '多语种营销助理', en: 'IP Video', color: 'bg-indigo-500' },
-                  { name: '销售转化助理', en: 'Sales Copilot', color: 'bg-teal-500' },
-                  { name: '短剧编导专家', en: 'Drama Director', color: 'bg-purple-500' },
+                  { name: '多语种视频助理', en: 'Video Officer', color: 'bg-indigo-500' },
+                  { name: '销售转化助理', en: 'Sales Assistant', color: 'bg-teal-500' },
+                  { name: '短剧策划助理', en: 'Drama Writer', color: 'bg-purple-500' },
                 ].map((agent, i) => (
                   <div key={i} className="p-5 space-y-2">
                     <div className="flex items-center gap-2">

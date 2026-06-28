@@ -20,7 +20,7 @@ export default function UnifiedDeliveryProcess() {
     {
       phase: "Step 02",
       title: "一键载入智能体",
-      desc: "直接将 Aideo 技能加载至侧边栏或企业 IM 群内，实现零门槛直接对话调用。"
+      desc: "直接将 羲梦 技能加载至侧边栏或企业 IM 群内，实现零门槛直接对话调用。"
     },
     {
       phase: "Step 03",
@@ -52,7 +52,7 @@ export default function UnifiedDeliveryProcess() {
             极简挂载：像安装插件一样简单
           </h2>
           <p className="text-xs text-neutral-500 leading-relaxed font-normal">
-            Aideo Studio 彻底摒弃了传统 SaaS 繁冗复杂的面板。我们以 <strong className="text-indigo-400 font-semibold">智能体技能 (Skills)</strong> 的轻量形态，直接无缝融入您的日常工具和沟通流程中。
+            羲梦工场 彻底摒弃了传统 SaaS 繁冗复杂的面板。我们以 <strong className="text-indigo-400 font-semibold">智能体技能 (Skills)</strong> 的轻量形态，直接无缝融入您的日常工具和沟通流程中。
           </p>
         </div>
 
@@ -91,7 +91,7 @@ export default function UnifiedDeliveryProcess() {
                 <Workflow className="w-3.5 h-3.5" />
               </div>
               <div>
-                <h4 className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider">Aideo Agent 技能模式</h4>
+                <h4 className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider">羲梦 Agent 技能模式</h4>
                 <p className="text-xs font-bold text-indigo-300">随身伴随与自然语言驱动</p>
               </div>
             </div>

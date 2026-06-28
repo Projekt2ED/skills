@@ -177,7 +177,7 @@ export default function ConsoleSimulatingGif({ limitToId }: ConsoleProps) {
         <span className="w-3 h-3 rounded-full bg-[#FF5F56] opacity-90" />
         <span className="w-3 h-3 rounded-full bg-[#FFBD2E] opacity-90" />
         <span className="w-3 h-3 rounded-full bg-[#27C93F] opacity-90" />
-        <span className="text-[11px] text-slate-500 ml-2.5 font-mono font-medium tracking-wide">Aideo Agent Live Simulator</span>
+        <span className="text-[11px] text-slate-500 ml-2.5 font-mono font-medium tracking-wide">羲梦 Agent Live Simulator</span>
       </div>
 
       {/* Scenario Indicator tabs inside console header */}
@@ -223,7 +223,7 @@ export default function ConsoleSimulatingGif({ limitToId }: ConsoleProps) {
             
             <div className="flex items-center gap-1.5 text-indigo-400 font-medium">
               <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-              <span className="text-[11px] font-semibold tracking-wider uppercase">Aideo Skill Agent</span>
+              <span className="text-[11px] font-semibold tracking-wider uppercase">羲梦 Skill Agent</span>
             </div>
 
             {/* AI is thinking/loading state */}
@@ -244,7 +244,7 @@ export default function ConsoleSimulatingGif({ limitToId }: ConsoleProps) {
             {(phase === 'ai-running' || phase === 'done') && (
               <div className="space-y-3 pt-0.5">
                 <p className="text-[10px] text-slate-500 font-mono tracking-wider uppercase border-b border-white/[0.04] pb-1">
-                  正在挂载并调度 Aideo Skill 插件流:
+                  正在挂载并调度 羲梦 Skill 插件流:
                 </p>
                 
                 {/* Steps logs */}
@@ -301,7 +301,7 @@ export default function ConsoleSimulatingGif({ limitToId }: ConsoleProps) {
                         {/* Poster preview mock */}
                         <div className="aspect-video bg-[#0B0C10] rounded-lg flex flex-col items-center justify-center relative overflow-hidden border border-white/[0.04] p-1.5">
                           <div className="border border-dashed border-white/[0.05] rounded-md w-full h-full flex flex-col items-center justify-center space-y-1 bg-[#12131A]/40">
-                            <span className="text-[9px] text-teal-400 font-bold bg-teal-950/50 px-1.5 py-0.5 rounded">AideoArt AI</span>
+                            <span className="text-[9px] text-teal-400 font-bold bg-teal-950/50 px-1.5 py-0.5 rounded">羲梦 Art AI</span>
                             <span className="text-[8px] text-slate-500 font-mono">北美温馨厨房海报.png</span>
                           </div>
                         </div>

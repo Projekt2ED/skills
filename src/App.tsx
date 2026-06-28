@@ -46,8 +46,8 @@ export default function App() {
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-sm text-white tracking-tight">Aideo Hub</span>
-              <span className="text-[9px] text-neutral-500 font-medium">跨境数字员工平台 v2.0</span>
+              <span className="font-bold text-sm text-white tracking-tight">羲梦工场</span>
+              <span className="text-[9px] text-neutral-500 font-medium">AI 数字员工技能包 v2.0</span>
             </div>
           </div>
 
@@ -168,13 +168,13 @@ export default function App() {
       <footer className="border-t border-neutral-900 bg-black py-10 relative z-10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <div className="space-y-1">
-            <p className="text-xs font-bold text-neutral-300">Aideo Studio — AI 视频营销智囊智能体</p>
+            <p className="text-xs font-bold text-neutral-300">羲梦科技 — AI 数字员工场景建设平台</p>
             <p className="text-[11px] text-neutral-500 font-normal leading-normal">
-              Aideo Studio 是供 OpenClaw / Codex / Trae 工具一键载入的 Skill 技能组件包。本页作为交付宣传与产品详情解构。
+              羲梦工场提供 AI 数字员工技能包全家桶，覆盖出海视频、销售转化、短剧策划等核心场景。
             </p>
           </div>
           <div className="text-[10px] text-neutral-600 font-mono">
-            © {new Date().getFullYear()} Aideo Studio. Powering global marketing automation.
+            © {new Date().getFullYear()} 羲梦科技. 跨境出海，一个工场就够了。
           </div>
         </div>
       </footer>
