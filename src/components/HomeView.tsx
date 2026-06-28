@@ -83,8 +83,10 @@ export default function HomeView({ onSelectEmployee }: HomeViewProps) {
         
         {/* ==================== 1. HERO SECTION ==================== */}
         <section className="text-center space-y-8 max-w-4xl mx-auto pt-8">
-          <div className="inline-flex items-center gap-1.5 bg-neutral-900 border border-neutral-800/80 px-4 py-1 rounded-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-neutral-900 border border-neutral-800/80 pl-2 pr-4 py-1 rounded-full">
+            <span className="w-5 h-5 rounded-full bg-white p-0.5 flex items-center justify-center overflow-hidden">
+              <img src="/brand/ximeng-logo.svg" alt="羲梦科技 Logo" className="w-full h-full object-contain" />
+            </span>
             <span className="text-[10px] font-semibold text-neutral-400 tracking-wider uppercase">羲梦工场 · AI 数字员工技能包</span>
           </div>
 
